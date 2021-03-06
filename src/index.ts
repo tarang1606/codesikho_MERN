@@ -1,5 +1,5 @@
-const express = require("express");
+import { Server } from "./server";
 
-const app = express();
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+let server = new Server().app;
+let port = 5000;
+server.listen(port, () => console.log(`Server is running on ${port}`));
